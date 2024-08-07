@@ -10,7 +10,7 @@ export const Basemaps = () => {
 	return (
 		<div className="basemaps-wrapper">
 			<div className="basemaps-checkbox">
-				Satélite
+				Satellite
 			</div>
 			<div className="switch-wrapper">
 				<label className="switch">
