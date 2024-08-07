@@ -33,11 +33,6 @@ export const Maps = () => {
 	const { activeSatelite, currentBaseMap } = useBaseMaps();
 	const { activeDraw } = useSelectors();
 
-	// Layers
-	// const { parcelsPolygon } = useParcelsPolygon();
-
-	// const layers: any = [ parcelsPolygon ];
-
 	const onContextMenu = (e: React.MouseEvent) => {e.preventDefault()};
 
 	useEffect(() => {
@@ -60,9 +55,8 @@ export const Maps = () => {
 						ref={mapRef}
 						initialViewState={viewport}
 						mapboxAccessToken={process.env.REACT_APP_MAPBOX_TOKEN} 
-						mapStyle={activeSatelite ? "mapbox://styles/mapbox/satellite-v9" : currentBaseMap}
+						mapStyle={!activeSatelite ? "mapbox://styles/mapbox/satellite-v9" : currentBaseMap}
 					>
-						{/*<DeckGLOverlay layers={layers}/>*/}
 						<MapControllers/>
 						<Styles/>
 						{activeDraw && <DrawPolygon/>}

@@ -2,11 +2,9 @@ import { MapsProvider } from './maps';
 import { FiltersProvider } from './filters';
 import { PlaceApiProvider } from './api';
 import { LeftProvider } from './left';
-import { SizesProvider } from './sizes';
 
 export const MainProvider = ({children}: any) => {
   return (
-    <SizesProvider>
     <LeftProvider>
     <FiltersProvider>
     <PlaceApiProvider>
@@ -16,7 +14,6 @@ export const MainProvider = ({children}: any) => {
     </PlaceApiProvider>
     </FiltersProvider>
     </LeftProvider>
-    </SizesProvider>
   )
 }
 
