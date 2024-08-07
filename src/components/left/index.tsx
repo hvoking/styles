@@ -12,7 +12,7 @@ export const Left = () => {
 			<img 
 				src={process.env.PUBLIC_URL + "/static/logos/logo.svg"} 
 				alt="logo" 
-				height="20px"
+				height="25px"
 			/>
 			<div style={{display: "grid", width: "100%", justifyItems: "center"}}>
 			<img 

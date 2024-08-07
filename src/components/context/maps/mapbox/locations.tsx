@@ -1,14 +1,21 @@
-export const blumenau = {
-  bearing: -82,
-  latitude: -26.91,
-  longitude: -49.08,
-  pitch: 43,
-  zoom: 15.65,
+export const barcelona = {
+  bearing: 0,
+  latitude: 41.39152,
+  longitude: 2.15000,
+  pitch: 0,
+  zoom: 11.2,
 };
-export const itajai = {
-  bearing: -58,
-  latitude: -26.91,
-  longitude: -48.66,
-  pitch: 59,
-  zoom: 15.87,
+export const madrid = {
+  bearing: 0,
+  latitude: 40.42076037777329,
+  longitude: -3.707056639993575,
+  pitch: 0,
+  zoom: 10,
+};
+export const mallorca = {
+  bearing: 0,
+  latitude: 39.657451,
+  longitude: 2.950045,
+  pitch: 0,
+  zoom: 9,
 };

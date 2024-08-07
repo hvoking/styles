@@ -17,15 +17,6 @@ import { useSelectors } from '../context/left/selectors';
 // Third-party imports
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { Map } from 'react-map-gl';
-import { DeckProps } from '@deck.gl/core/typed';
-import { MapboxOverlay } from '@deck.gl/mapbox/typed';
-import { useControl } from 'react-map-gl';
-
-const DeckGLOverlay = (props: DeckProps) => {
-  const deck = useControl<any>(() => new MapboxOverlay(props));
-  deck.setProps(props);
-  return null;
-}
 
 export const Maps = () => {
 	const mapRef = useRef<any>();

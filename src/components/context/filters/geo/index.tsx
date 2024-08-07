@@ -9,7 +9,7 @@ export const useGeo = () => {
 }
 
 export const GeoProvider = ({children}: any) => {
-	const [ cityName, setCityName ] = useState<any>("blumenau");
+	const [ cityName, setCityName ] = useState<any>("barcelona");
 	
 	return (
 		<GeoContext.Provider value={{

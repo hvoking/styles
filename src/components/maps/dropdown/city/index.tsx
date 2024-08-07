@@ -10,13 +10,15 @@ import { cities } from './cities';
 
 // Context imports
 import { useMapboxProperties } from '../../../context/maps/mapbox';
-import { useGeo } from '../../../context/filters/geo'
+import { useGeo } from '../../../context/filters/geo';
+import { useStyle } from '../../../context/api/styles';
 
 export const CityDropdown = () => {
 	const { Locations, viewport, setViewport } = useMapboxProperties();
 	const { cityName, setCityName, setCityId } = useGeo();
+	const { setStyleName } = useStyle();
 
-	const [ suggestions, setSuggestions ] = useState(['Blumenau', 'Barcelona', 'Londres', 'Asunción']);
+	const [ suggestions, setSuggestions ] = useState(['Barcelona', 'Madrid', 'Mallorca']);
 	const [ suggestionIndex, setSuggestionIndex ] = useState(0);
 	const [ suggestionsActive, setSuggestionsActive ]= useState(false);
 
@@ -24,6 +26,7 @@ export const CityDropdown = () => {
 		const cityValue = e.target.innerText.toLowerCase();
 
 		setCityName(cities[cityValue]);
+		setStyleName(cities[cityValue]);
 		setViewport({...viewport, ...Locations[cities[cityValue]]});
 		setSuggestionsActive((false))
 	};

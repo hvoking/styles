@@ -11,7 +11,7 @@ export const useStyle = () => {
 
 export const StyleProvider = ({children}: any) => {
 	const [ styleData, setStyleData ] = useState<any[]>([]);
-	const [ styleName, setStyleName ] = useState("zoneamento_blumenau");
+	const [ styleName, setStyleName ] = useState("barcelona");
 
 	useEffect(() => {
 		const fetchData = async () => {
@@ -29,7 +29,7 @@ export const StyleProvider = ({children}: any) => {
 	}, [ styleName ])
 
 	return (
-		<StyleContext.Provider value={{ styleData, styleName }}>
+		<StyleContext.Provider value={{ styleData, styleName, setStyleName }}>
 			{children}
 		</StyleContext.Provider>
 	)

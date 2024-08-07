@@ -13,7 +13,7 @@ export const useMapboxProperties = () => {
 }
 
 export const MapboxProvider = ({children}: any) => {
-  const [ viewport, setViewport ] = useState(Locations.blumenau);
+  const [ viewport, setViewport ] = useState(Locations.barcelona);
   
   return (
     <MapboxContext.Provider value={{ 

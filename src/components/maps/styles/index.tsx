@@ -19,7 +19,7 @@ export const Styles = () => {
 
 	return (
 		<Source 
-			id={`${styleName}`} 
+			id="raster-style" 
 			type="vector" 
 			tiles={[ url ]}
 		>
