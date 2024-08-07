@@ -1,7 +1,6 @@
 // App imports
 import { Left } from './left';
 import { Maps } from './maps';
-import { Right } from './right';
 import './styles.scss';
 
 export const Main = () => {
@@ -9,7 +8,6 @@ export const Main = () => {
 		<div className="main">
 			<Left/>
 			<Maps/>
-			<Right/>
 		</div>
 	)
 }

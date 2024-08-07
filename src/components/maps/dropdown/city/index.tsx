@@ -6,7 +6,7 @@ import { Suggestions } from './Suggestions';
 import './styles.scss';
 
 // Variable imports
-import { cities, data } from './cities';
+import { cities } from './cities';
 
 // Context imports
 import { useMapboxProperties } from '../../../context/maps/mapbox';
@@ -16,7 +16,7 @@ export const CityDropdown = () => {
 	const { Locations, viewport, setViewport } = useMapboxProperties();
 	const { cityName, setCityName, setCityId } = useGeo();
 
-	const [ suggestions, setSuggestions ] = useState(['Blumenau', 'Itajaí']);
+	const [ suggestions, setSuggestions ] = useState(['Blumenau', 'Barcelona', 'Londres', 'Asunción']);
 	const [ suggestionIndex, setSuggestionIndex ] = useState(0);
 	const [ suggestionsActive, setSuggestionsActive ]= useState(false);
 
@@ -24,7 +24,6 @@ export const CityDropdown = () => {
 		const cityValue = e.target.innerText.toLowerCase();
 
 		setCityName(cities[cityValue]);
-		setCityId(data[cities[cityValue]]);
 		setViewport({...viewport, ...Locations[cities[cityValue]]});
 		setSuggestionsActive((false))
 	};
