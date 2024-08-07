@@ -1,0 +1,13 @@
+.left-item-wrapper {
+	scroll-snap-align: start;
+	display: grid;
+	grid-gap: 20px;
+	background-color: rgba(33, 33, 43, 1);
+	border-radius: 20px;
+	height: calc(100vh - 60px);
+	grid-template-rows: min-content min-content auto;
+}
+
+.slider-wrapper {
+	min-height: 60px;
+}

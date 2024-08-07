@@ -1,0 +1,60 @@
+.sidebar-left {
+  background-color: rgba(0, 0, 0, 1);
+  padding-left: 22px;
+  padding-right: 40px;
+  padding-top: 8px;
+  color: rgba(255, 255, 255, 1);
+  position: relative;
+}
+.place-description {
+  font-size: 0.75rem;
+}
+.tutorial-wrapper {
+  display: grid;
+  grid-template-columns: 35px auto;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  align-items: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.props-wrapper {
+  font-size:.875rem;
+}
+.filtros-wrapper {
+  display: grid;
+  grid-template-columns: 35px auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  align-items: center;
+  cursor: pointer;
+  div {
+    font-size: .875rem;
+    font-weight: 600;
+  }
+}
+.filtros-wrapper:hover {
+  background-color: rgba(122, 122, 122, 1);
+  border-radius: 3px;
+}
+
+.ecossistema-wrapper {
+  font-size:.875rem;
+  padding-top: 20px;
+}
+.feedback-wrapper {
+  display: grid;
+  grid-template-columns: 35px auto;
+  padding-top: 100px;
+  div {
+    font-weight: 600;
+    font-size: .875rem;
+  }
+}
+
+// mobile-style
+@media screen and (max-width: 1000px) {
+  .sidebar-left {
+    display: none;
+  }
+}
