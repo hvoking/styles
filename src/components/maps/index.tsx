@@ -3,7 +3,7 @@ import { useRef, useEffect } from 'react';
 
 // App imports
 import { MapControllers } from './controllers';
-import { CityDropdown } from './dropdown/city';
+import { CityDropdown } from './dropdown';
 import { Basemaps } from './basemaps';
 import { DrawPolygon } from './draw';
 import { Styles } from './styles';
