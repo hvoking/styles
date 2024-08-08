@@ -1,5 +1,5 @@
 // React imports
-import { useState, useContext, createContext } from 'react';
+import { useState, useEffect, useRef, useContext, createContext } from 'react';
 
 // App imports
 import * as Locations from './locations';
@@ -13,11 +13,23 @@ export const useMapboxProperties = () => {
 }
 
 export const MapboxProvider = ({children}: any) => {
+  const mapRef = useRef<any>();
   const [ viewport, setViewport ] = useState(Locations.barcelona);
+
+  useEffect(() => {
+    mapRef.current?.flyTo({
+      center: [viewport.longitude, viewport.latitude],
+      zoom: viewport.zoom,
+      pitch: viewport.pitch,
+      bearing: viewport.bearing,
+      duration: 4000, 
+      essential: true,
+    });
+  }, [viewport])
   
   return (
     <MapboxContext.Provider value={{ 
-      viewport, setViewport, Locations,
+      mapRef, viewport, setViewport, Locations,
     }}>
       {children}
     </MapboxContext.Provider>
