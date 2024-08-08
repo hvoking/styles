@@ -2,11 +2,7 @@
 import './styles.scss';
 
 // Context imports
-import { useSelectors } from '../context/left/selectors';
-
 export const Left = () => {
-	const { activeDraw, setActiveDraw } = useSelectors();
-	
 	return (
 		<div className="sidebar-left">
 			<img 

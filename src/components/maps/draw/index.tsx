@@ -3,6 +3,7 @@ import { useState, useCallback } from 'react';
 
 // App imports
 import { DrawControl } from './control';
+import './styles.scss';
 
 // Context imports
 import { useDrawPolygon } from '../../context/filters/draw';

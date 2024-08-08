@@ -6,9 +6,6 @@ import { Source, Layer } from 'react-map-gl';
 
 export const Styles = () => {
 	const { styleData, styleName } = useStyle();
-
-	console.log(styleData)
-
 	const tempUrl = `
 		${process.env.REACT_APP_API_URL}/
 		tiles/

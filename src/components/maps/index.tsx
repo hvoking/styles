@@ -2,14 +2,13 @@
 import { MapControllers } from './controllers';
 import { CityDropdown } from './dropdown';
 import { Basemaps } from './basemaps';
-import { DrawPolygon } from './draw';
+// import { DrawPolygon } from './draw';
 import { Styles } from './styles';
 import './styles.scss';
 
 // Context imports
 import { useMapboxProperties } from '../context/maps/mapbox';
 import { useBaseMaps } from '../context/maps/basemaps';
-import { useSelectors } from '../context/left/selectors';
 
 // Third-party imports
 import 'mapbox-gl/dist/mapbox-gl.css';
@@ -18,7 +17,6 @@ import { Map } from 'react-map-gl';
 export const Maps = () => {
 	const { mapRef, viewport } = useMapboxProperties();
 	const { activeSatelite, currentBaseMap } = useBaseMaps();
-	const { activeDraw } = useSelectors();
 
 	return (
 		<div className="map-container">
@@ -31,7 +29,7 @@ export const Maps = () => {
 			>
 				<MapControllers/>
 				<Styles/>
-				{activeDraw && <DrawPolygon/>}
+				{/*<DrawPolygon/>*/}
 			</Map>
 			<Basemaps/>
 		</div>
